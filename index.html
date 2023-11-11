@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Greeting</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #card {
+            background-image: linear-gradient( 111.4deg,  rgba(238,113,113,1) 1%, rgba(246,215,148,1) 58% );
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <h1>Happy Diwali!</h1>
+        <h3>By Vivek King</h3>
+        <p>Wishing you and your family a festival filled with joy and prosperity.
+
+        </p>
+        <p>
+            It is time When families comes together to celebrate the victory of light over Darkness. 
+        </p>
+        <label for="name">Enter your name: </label>
+        <input type="text" id="name" placeholder="Your Name">
+        <button onclick="generateMessage()">Generate Message</button>
+        
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function generateMessage() {
+            var name = document.getElementById('name').value;
+            var output = document.getElementById('output');
+
+            if (name.trim() !== '') {
+                var message = Dear ${name},<br>May the festival of lights brighten your life with joy and prosperity. Wishing you a Happy Diwali! 🪔;
+                output.innerHTML = message;
+            } else {
+                output.innerHTML = 'Please enter your name.';
+            }
+        }
+    </script>
+</body>
+</html>
